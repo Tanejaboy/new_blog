@@ -1,0 +1,10 @@
+@import "variables";
+// importing navbar
+
+@import "navbar";
+body {
+  display : flex;
+  background: $main_background_color;
+  color: $main_color;
+}
+
