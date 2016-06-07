@@ -4,7 +4,6 @@
   text-align: center;
   font-size: 1.4em;
   color: #fff;
-  background-color: #666;
   padding: 20px;
   display: flex;
   cursor: pointer;
@@ -26,7 +25,6 @@
 
 .navbar-toggle {
   color: #444;
-  background-color: #fff;
   position: absolute;
   width: 30px;
   height: 25px;
@@ -44,7 +42,12 @@
     position: absolute;
     top: 6px;
     left: 6px;
-    background-color: #444; }
+    background-color: #444;
+    -webkit-transition: all 1.3s ease;
+    -moz-transition: all 1.3s ease;
+    -ms-transition: all 1.3s ease;
+    -o-transition: all 1.3s ease;
+    transition: all 1.3s ease; }
   .navbar-toggle:after {
     top: 16px; }
   .navbar-toggle.close {
@@ -55,15 +58,22 @@
     -ms-transform: rotate(-225deg);
     -o-transform: rotate(-225deg);
     transform: rotate(-225deg);
-    top: 0; }
+    top: 15px; }
+  .navbar-toggle.close:after {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+    top: 15px; }
 
 .navbar {
   opacity: 0;
-  -webkit-transition: opacity .3s linear;
-  -moz-transition: opacity .3s linear;
-  -ms-transition: opacity .3s linear;
-  -o-transition: opacity .3s linear;
-  transition: opacity .3s linear; }
+  -webkit-transition: opacity 1.6s linear;
+  -moz-transition: opacity 1.6s linear;
+  -ms-transition: opacity 1.6s linear;
+  -o-transition: opacity 1.6s linear;
+  transition: opacity 1.6s linear; }
   .navbar.show {
     display: flex;
     justify-content: flex-start;
@@ -77,16 +87,21 @@
     -ms-transform: translate(0px);
     -o-transform: translate(0px);
     transform: translate(0px);
-    opacity: 1; }
+    opacity: 1;
+    -webkit-transition: opacity 1.6s linear;
+    -moz-transition: opacity 1.6s linear;
+    -ms-transition: opacity 1.6s linear;
+    -o-transition: opacity 1.6s linear;
+    transition: opacity 1.6s linear; }
   .navbar li {
-    background-color: darkblue;
     text-align: center;
-    display: flex; }
+    display: flex;
+    -webkit-transition: all 1.3s ease;
+    -moz-transition: all 1.3s ease;
+    -ms-transition: all 1.3s ease;
+    -o-transition: all 1.3s ease;
+    transition: all 1.3s ease; }
     .navbar li:hover {
-      background-color: cadetblue; }
-    .navbar li:nth-child(even):hover {
-      background-color: darkblue; }
-    .navbar li:nth-child(even) {
       background-color: cadetblue; }
     .navbar li a {
       color: #f1f1f1;
