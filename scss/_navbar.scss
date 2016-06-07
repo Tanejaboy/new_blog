@@ -1,3 +1,29 @@
+@import "variables";
+
 .navbar {
-  background-color: darkblue;
+  color: $main_color;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  li {
+    background-color: darkblue;
+    text-align: center;
+    display: flex;
+
+    &:nth-child(even) {
+      background-color: cadetblue;
+    }
+
+    a {
+      color: $main_color;
+      padding: 10px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
 }
