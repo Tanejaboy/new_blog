@@ -1,19 +1,107 @@
 @import "variables";
 
-.navbar {
-  color: $main_color;
-  list-style: none;
+.navbar-container {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+  font-size: 1.4em;
+  color: #fff;
+  background-color: #666;
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  flex-flow: nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  cursor: pointer;
+  z-index: 999;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+  &.open-navbar {
+    width: 550px;
+    -webkit-transition: width 1.3s ease;
+    -moz-transition: width 1.3s ease;
+    -ms-transition: width 1.3s ease;
+    -o-transition: width 1.3s ease;
+    transition: width 1.3s ease;
+  }
+}
+.navbar-toggle {
+  color: #444;
+  background-color: #fff;
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top: 18px;
+  right: 20px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+  &:before, &:after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: #444;
+  }
+  &:after {
+    top: 16px;
+  }
+
+  &.close {
+    right: 0;
+  }
+
+  &.close:before {
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    -ms-transform: rotate(-225deg);
+    -o-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    top: 0;
+  }
+}
+.navbar {
+  opacity: 0;
+  -webkit-transition: opacity .3s linear;
+  -moz-transition: opacity .3s linear;
+  -ms-transition: opacity .3s linear;
+  -o-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  &.show {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top:7px;
+    left:0;
+    margin: 0;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -ms-transform: translate(0px);
+    -o-transform: translate(0px);
+    transform: translate(0px);
+    opacity: 1;
+  }
 
   li {
     background-color: darkblue;
     text-align: center;
     display: flex;
+
+    &:hover {
+      background-color: cadetblue;
+    }
+    &:nth-child(even):hover {
+      background-color: darkblue;
+    }
 
     &:nth-child(even) {
       background-color: cadetblue;

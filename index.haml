@@ -4,17 +4,20 @@
   %head
     %title New_Blog
     %link(rel="stylesheet" type="text/css" href="scss/style.css")
+    %link(rel="stylesheet" type="text/css" href="css/font-awesome.min.css")
   %body
     .container
-      %div class
-      -#%ul.navbar
-      -#  %li
-      -#    %a(href="#home") home
-      -#  %li
-      -#    %a(href="#home") about
-      -#  %li
-      -#    %a(href="#home") contact
-      -#  %li
-      -#    %a(href="#home") feedback
-      -#  %li
-      -#    %a(href="#home") design
+      .navbar-container
+        .navbar-toggle
+        %ul.navbar
+          %li
+            %a(href="#") home
+          %li
+            %a(href="#") about
+          %li
+            %a(href="#") contact
+          %li
+            %a(href="#") feedback
+
+    %script(src="js/jquery.min.js")
+    %script(src="js/myfunctions.js")
