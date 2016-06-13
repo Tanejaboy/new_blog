@@ -9,6 +9,7 @@
   padding: 20px;
   display: flex;
   cursor: pointer;
+  margin-bottom: 40px;
   z-index: 999;
   position: relative;
   overflow: hidden;
@@ -27,6 +28,7 @@
     transition: width 1.3s ease;
   }
 }
+
 .navbar-toggle {
   color: #444;
   position: absolute;
@@ -80,6 +82,7 @@
     top: 15px;
   }
 }
+
 .navbar {
   opacity: 0;
   -webkit-transition: opacity 1.6s linear;
@@ -92,8 +95,8 @@
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    top:7px;
-    left:0;
+    top: 7px;
+    left: 0;
     margin: 0;
     -webkit-transform: translate(0px);
     -moz-transform: translate(0px);
@@ -129,4 +132,103 @@
       text-transform: capitalize;
     }
   }
+}
+
+.navigation-panel {
+  background-color: transparent;
+  color: black;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+
+  .bars {
+    position: relative;
+    width: 35px;
+    height: 30px;
+
+    &:before, &:after {
+      content: '';
+      background: #ffecbf;
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      top: 5px;
+      left: 4px;
+    }
+
+    &:after {
+      top: 20px;
+    }
+
+    &.open:before {
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg);
+      -webkit-transition: all .6s ease;
+      -moz-transition: all .6s ease;
+      -ms-transition: all .6s ease;
+      -o-transition: all .6s ease;
+      transition: all .6s ease;
+    }
+  }
+  .letter {
+    color: #444444;
+    background-color: transparent;
+    padding: 10px;
+    opacity: 1;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+  }
+  .n {
+    opacity: 0;
+    position: absolute;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -ms-transform: translate(0px);
+    -o-transform: translate(0px);
+    transform: translate(0px);
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+  }
+  .n-hover {
+    opacity: 1;
+    position: absolute;
+    -webkit-transform: translate(-27px, -4px);
+    -moz-transform: translate(-27px, -4px);
+    -ms-transform: translate(-27px, -4px);
+    -o-transform: translate(-27px, -4px);
+    transform: translate(-27px, -4px);
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+  }
+
+  .v {
+    @extend .n;
+  }
+  .v-hover {
+    opacity: 1;
+    position: absolute;
+    -webkit-transform: translate(27px, -4px) !important;
+    -moz-transform: translate(27px, -4px) !important;
+    -ms-transform: translate(27px, -4px) !important;
+    -o-transform: translate(27px, -4px) !important;
+    transform: translate(27px, -4px) !important;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+  }
+
 }

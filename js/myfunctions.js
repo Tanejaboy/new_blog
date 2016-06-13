@@ -10,3 +10,15 @@ $(document).ready(function() {
       }
    });
 });
+
+$(document).ready(function() {
+    $('.navigation-panel').on({
+        mouseover: function() {
+            $('.n').toggleClass('n-hover');
+            $('.v').toggleClass('v-hover');
+        },
+        click: function() {
+            $('.bars').toggleClass('open');
+        }
+    });
+});
